@@ -62,12 +62,12 @@ namespace v0623
                    
                 }
 
-                /*if (Score <= 0)
+                if (Score <= 0)
                 {
                     timer1.Enabled = false;
                     MessageBox.Show("GAMEOVER");
 
-                }*/
+                }
 
             }
         }
