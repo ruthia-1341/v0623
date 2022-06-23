@@ -43,7 +43,6 @@ namespace v0623
             label3.Top = fpos.Y - label3.Height / 2;
             label3.Text = $"{fpos.X},{fpos.Y}";
 
-
             Score--;
             label2.Text = ("Score ") + Score;
 
