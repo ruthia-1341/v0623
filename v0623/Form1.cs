@@ -36,6 +36,12 @@ namespace v0623
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
+            Point spos = MousePosition;
+            label3.Left = spos.X;
+            label3.Top = spos.Y;
+
+
             Score--;
             label2.Text = ("Score ") + Score;
 
@@ -44,8 +50,8 @@ namespace v0623
             
             if (Score <= 0)
                 {
-                    timer1.Enabled = false;
-                    MessageBox.Show("GAMEOVER");
+                    //timer1.Enabled = false;
+                    label2.Text=("GAMEOVER");
                 }
 
             if (label1.Top < 0 || label1.Top > ClientSize.Height)
@@ -71,6 +77,10 @@ namespace v0623
          {
 
          }
-        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     } 
 }
