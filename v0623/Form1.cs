@@ -14,6 +14,7 @@ namespace v0623
     {
         int vx = -10;
         int vy = -10;
+        int Score = 100;
 
         public Form1()
         {
@@ -22,12 +23,16 @@ namespace v0623
 
         private void label1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("堀 朱莉");
             timer1.Enabled = false;
+            MessageBox.Show("堀 朱莉");
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Score--;
+            label2.Text = ("Score ") + Score;
+
             label1.Left += vx;
             label1.Top += vy;
 
@@ -41,6 +46,11 @@ namespace v0623
                 vy = -vy;
             }
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
