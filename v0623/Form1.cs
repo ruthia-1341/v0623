@@ -38,8 +38,10 @@ namespace v0623
         {
 
             Point spos = MousePosition;
-            label3.Left = spos.X;
-            label3.Top = spos.Y;
+            Point fpos = PointToClient(spos);
+            label3.Left = fpos.X;
+            label3.Top = fpos.Y;
+            label3.Text = $"{fpos.X},{fpos.Y}";
 
 
             Score--;
