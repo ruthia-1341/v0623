@@ -27,7 +27,7 @@ namespace v0623
             {
                 timer1.Enabled = false;
                 MessageBox.Show("堀 朱莉");
-            }else if(timer1.Enabled == false)
+            } else if (timer1.Enabled == false)
             {
                 MessageBox.Show("堀 朱莉");
                 timer1.Enabled = true;
@@ -39,32 +39,39 @@ namespace v0623
             Score--;
             label2.Text = ("Score ") + Score;
 
-            label1.Left += vx;
-            label1.Top += vy;
-            label1.Text = ("┗( ・‵ω・´ )┓三");
+            label1.Left += vx*(int)1.10f;
+            label1.Top += vy * (int)1.10f;
+
             if (label1.Left < 0 || label1.Left > ClientSize.Width)
             {
                 vx = -vx;
-                label1.Text = ("三┏( ‵・ω'・ )┛");
-            }
+                if (label1.Text == ("┗( ・ω・´ )┓三"))
+                {
+                    label1.Text = ("三┏( ‵ ・ω・ )┛");
+                }
+                else if (label1.Text == ("三┏( ‵ ・ω・ )┛"))
+                {
+                    label1.Text = ("┗( ・ω・´ )┓三");
+                }
 
-            if (label1.Top < 0 || label1.Top > ClientSize.Height)
-            {
-                vy = -vy;
-            }
+                if (label1.Top < 0 || label1.Top > ClientSize.Height)
+                {
+                    vy = -vy;
+                }
 
-            if (Score <= 0)
-            {
-                timer1.Enabled = false;
-                MessageBox.Show("GAMEOVER");
-                
-            }
+                /*if (Score <= 0)
+                {
+                    timer1.Enabled = false;
+                    MessageBox.Show("GAMEOVER");
 
+                }*/
+
+            }
         }
+         private void label2_Click(object sender, EventArgs e)
+         {
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-            
-        }
-    }
+         }
+        
+    } 
 }
