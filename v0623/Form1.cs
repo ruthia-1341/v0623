@@ -64,8 +64,6 @@ namespace v0623
 
 
 
-
-
             if (Score <= 0)
                 {
                     //timer1.Enabled = false;
