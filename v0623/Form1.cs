@@ -41,10 +41,11 @@ namespace v0623
 
             label1.Left += vx;
             label1.Top += vy;
-            label1.Text = ("Σ((( つ•̀ω•́)つ");
+            label1.Text = ("┗( ・‵ω・´ )┓三");
             if (label1.Left < 0 || label1.Left > ClientSize.Width)
             {
                 vx = -vx;
+                label1.Text = ("三┏( ‵・ω'・ )┛");
             }
 
             if (label1.Top < 0 || label1.Top > ClientSize.Height)
