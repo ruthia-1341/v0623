@@ -39,7 +39,7 @@ namespace v0623
             Score--;
             label2.Text = ("Score ") + Score;
 
-            label1.Left += vx*(int)1.10f;
+            label1.Left += vx*(int)1.10f;//レジのバイトで返金作業するときに×1.08（軽減税率対応物）と×1.10よく使うからよかったー（返金が良いこととは言っていない）（こちらのミス）（ポンコツ店員）
             label1.Top += vy * (int)1.10f;
             
             if (Score <= 0)
@@ -65,10 +65,6 @@ namespace v0623
                 {
                     label1.Text = ("┗( ・ω・´ )┓三");
                 }
-
-
-                
-
             }
         }
          private void label2_Click(object sender, EventArgs e)
