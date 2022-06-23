@@ -23,9 +23,15 @@ namespace v0623
 
         private void label1_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = false;
-            MessageBox.Show("堀 朱莉");
-            
+            if (timer1.Enabled == true)
+            {
+                timer1.Enabled = false;
+                MessageBox.Show("堀 朱莉");
+            }else if(timer1.Enabled == false)
+            {
+                MessageBox.Show("堀 朱莉");
+                timer1.Enabled = true;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -35,15 +41,22 @@ namespace v0623
 
             label1.Left += vx;
             label1.Top += vy;
-
-            if (label1.Left < 0 || label1.Left >= ClientSize.Width)
+            label1.Text = ("Σ((( つ•̀ω•́)つ");
+            if (label1.Left < 0 || label1.Left > ClientSize.Width)
             {
                 vx = -vx;
             }
 
-            if (label1.Top < 0 || label1.Top >= ClientSize.Height)
+            if (label1.Top < 0 || label1.Top > ClientSize.Height)
             {
                 vy = -vy;
+            }
+
+            if (Score <= 0)
+            {
+                timer1.Enabled = false;
+                MessageBox.Show("GAMEOVER");
+                
             }
 
         }
