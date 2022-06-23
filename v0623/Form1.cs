@@ -41,7 +41,18 @@ namespace v0623
 
             label1.Left += vx*(int)1.10f;
             label1.Top += vy * (int)1.10f;
+            
+            if (Score <= 0)
+                {
+                    timer1.Enabled = false;
+                    MessageBox.Show("GAMEOVER");
+                }
 
+            if (label1.Top < 0 || label1.Top > ClientSize.Height)
+            {
+                vy = -vy;
+
+            }
 
             if (label1.Left < 0 || label1.Left > ClientSize.Width)
             {
@@ -56,18 +67,7 @@ namespace v0623
                 }
 
 
-                if (label1.Top < 0 || label1.Top > ClientSize.Height)
-                {
-                    vy = -vy;
-                   
-                }
-
-                if (Score <= 0)
-                {
-                    timer1.Enabled = false;
-                    MessageBox.Show("GAMEOVER");
-
-                }
+                
 
             }
         }
